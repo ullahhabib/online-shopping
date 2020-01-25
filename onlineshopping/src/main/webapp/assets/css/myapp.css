@@ -42,14 +42,19 @@
 *, ::after, ::before {
 	box-sizing: border-box
 }
+html{
+	height: 100%
+}
 body {
   padding-top: 56px;
+  height: 100%;
 }
 html {
 	font-family: sans-serif;
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: transparent
+	 
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav,
@@ -67,7 +72,7 @@ body {
 	line-height: 1.5;
 	color: #212529;
 	text-align: left;
-	background-color: #fff
+	background-color: #8a3232;
 }
 
 [tabindex="-1"]:focus {
@@ -4103,8 +4108,8 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 }
 
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-	color: #495057;
-	background-color: #fff;
+	color: #88888;
+	background-color: #ffffff;
 	border-color: #dee2e6 #dee2e6 #fff
 }
 
@@ -4119,7 +4124,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-	color: #fff;
+	color: #8000ff;
 	background-color: #007bff
 }
 
@@ -4143,6 +4148,8 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 
 .tab-content>.active {
 	display: block
+	color: #white
+	
 }
 
 .navbar {
@@ -4516,7 +4523,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active,
 	.navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link
 	{
-	color: #fff
+	color: #400040
 }
 
 .navbar-dark .navbar-toggler {
@@ -9499,7 +9506,7 @@ supports ((position:-webkit-sticky ) or (position:sticky )){ .
 }
 
 .text-white {
-	color: #fff !important
+	color: #c0c0c0 !important
 }
 
 .text-primary {
@@ -9649,10 +9656,10 @@ a.text-dark:focus, a.text-dark:hover {
 		min-width: 992px !important
 	}
 	.container {
-		min-width: 992px !important
+		min-width: 1000px !important
 	}
 	.navbar {
-		display: none
+		display: none;
 	}
 	.badge {
 		border: 1px solid #000
@@ -9678,4 +9685,20 @@ a.text-dark:focus, a.text-dark:hover {
 		border-color: #dee2e6
 	}
 }
-/*# sourceMappingURL=bootstrap.min.css.map */
+/*# Custom Styling */
+.wrapper{
+	min-height:100%;
+	position: relative;
+}
+
+.content{
+	padding-bottom:inherit;
+}
+
+.footer {
+	position: inherit;
+	bottom: auto;
+	height: 60px;
+	padding: 10px;
+	
+}
