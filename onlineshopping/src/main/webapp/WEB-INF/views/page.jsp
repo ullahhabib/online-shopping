@@ -23,8 +23,11 @@
 
 <title>Habib's Online Shopping - ${title}</title>
 
-<script> 
-	window.menu = $title;
+<script>
+	window.menu = $
+	{
+		title
+	};
 </script>
 
 
@@ -32,52 +35,59 @@
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-
 <!-- Bootstrap Yeti theme CSS -->
 <link href="${css}/bootstrap_yeti.css" rel="stylesheet">
-
 
 <!-- Custom styles for this template -->
 <link href="${css }/myapp.css" rel="stylesheet">
 
 </head>
 <body>
-<div class = "wrapper">
-	<!-- Navigation -->
-	<%@include file="./shared/navbar.jsp"%>
+	<div class="wrapper">
+		<!-- Navigation -->
+		<%@include file="./shared/navbar.jsp"%>
 
 
-	<!-- Page Content -->
-	
-	<div class = "content">
-	<!-- Loading the home content -->
-	<c:if test="${userClickHome == true }">
-		<%@include file="home.jsp"%>
-	</c:if>
-	
-	<!-- Loading only when user clicks about -->
-	<c:if test="${userClickAbout == true }">
-		<%@include file="about.jsp"%>
-	</c:if>
+		<!-- Page Content -->
 
-	<!-- Loading only when user clicks Contact -->
-	<c:if test="${userClickContact == true }">
-		<%@include file="contact.jsp"%>
-	</c:if>
- 	</div>
-	
-	
-	
-	<!-- Footer -->
-	<%@include file="./shared/footer.jsp"%>
+		<!-- Loading only when user clicks View Products -->
+		<c:if
+			test="${userClickAllProducts == true or userClickCategoryProducts == true }">
+			<%@include file="listProducts.jsp"%>
+		</c:if>
+
+		<div class="content">
+			<!-- Loading the home content -->
+			<c:if test="${userClickHome == true }">
+				<%@include file="home.jsp"%>
+			</c:if>
+
+			<!-- Loading only when user clicks about -->
+			<c:if test="${userClickAbout == true }">
+				<%@include file="about.jsp"%>
+			</c:if>
+
+			<!-- Loading only when user clicks Contact -->
+			<c:if test="${userClickContact == true }">
+				<%@include file="contact.jsp"%>
+			</c:if>
 
 
-	<!-- Bootstrap core JavaScript -->
-	<script src="${js}/jquery/jquery.min.js"></script>
-	<script src="${js}/bootstrap/js/bootstrap.bundle.min.js"></script>
-	
-	<!-- Self coded JavaScript file -->
-	<script src="${js}/myapp.js"></script>
+
+		</div>
+
+
+
+		<!-- Footer -->
+		<%@include file="./shared/footer.jsp"%>
+
+
+		<!-- Bootstrap core JavaScript -->
+		<script src="${js}/jquery/jquery.min.js"></script>
+		<script src="${js}/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+		<!-- Self coded JavaScript file -->
+		<script src="${js}/myapp.js"></script>
 
 	</div>
 </body>
